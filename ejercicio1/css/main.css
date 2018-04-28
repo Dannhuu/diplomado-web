@@ -18,15 +18,204 @@ p{
 }
 */
 
-.container{
+.container {
 	max-width: 1200px;
-
-
-/*
+	/*
 Para centar un elemnto de bloque. tenemos que establecer un márgen automático a la izquierda y también a la derecha
 */
-
-
-margin: 0 auto;
-
+	margin: 0 auto;
 }
+/*
+Selectores básicos
+
+	1. Por eriqueta: se escribe unicamente el nombre de la etiqueta 
+	p {
+		font-family: arial;
+		font-size: 14;
+		color: #f00;
+	}
+
+	2. Por clase: Se escribe "." seguido del valor del atributo "class"
+	.container{
+		max-width: 1200 px;
+		margin: 0 auto;	
+	}
+
+	3.Por id: Se escribe "#" segudo del valor del tributo "id".
+	(No recomendable)
+	#linkGoogle{
+		color: #ff0;
+		text-decoration: none;
+}
+
+
+	Selectores descendientes: Se utilizan cuando necesitamos estilizar agùn elemnto que se encuntra dentro de otro 
+		main section p a {
+		color: #f00
+		}
+		
+		.contact ul li a {
+		text-decoratio: none;
+		}
+
+	
+	CSS: Modelo de cajas (Model Box): Se refiere a que CSS Considera a todos los elemntos HTML como cajas 
+	Las propiedades de modelo de cajas se puedenaplicar a cualquier elemnto HTML y estas son las unicas que no se heredan
+		Por ejemplo;
+
+			-width: (Number)
+
+				width: 300px;
+
+			-height: (Number)
+
+				height: 300px;
+
+			-border: (borber-width) (border-style) (color)
+				
+				boder: 1px solid #ccc
+
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc
+			
+				border-left/right/top/left-width/style/color;
+
+			-background: (color) (background-image) (background-repeat) (background-position) (background-attachment)
+
+				background: #f00 url("../images/img") no-repeat center center fixed;
+				
+				background-color: #f00 (default/transparent);
+				background-image: urel(".../images/img345");
+				background-repeat: no-repeat/repeat;
+				background-position: posX/posY (default/Left/top)
+					posX= left center right [Number] 3oopx
+					posY= top center botton [Number] 3oo px
+				background-attachement: scroll / fixed
+
+			-margin: 10px; (1 valor, aplica a los 4 lados) 
+					 10px 10px; (2 valores aplica top/botto, left/right)
+					 10px 20px 30px; (3 valores aplica top, left/right, botton)
+					 10px 30px 30px 40px; (4 valores aplica top, right, botton, left
+)
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 10px;
+				margin-botton: 10px
+
+			-padding: igual que margin 
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 10px;
+				padding-botton: 10px
+
+*/
+
+.color-azul {
+	color: #1D5ACD;
+}
+.page-header {
+	padding: 25px 25px 250px;
+	background: url("../images/header.jpg") no-repeat center center;
+}
+.page-header h1 {
+	margin: 0;
+	color: #FFF;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 30;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 20px #666;
+	text-align: center
+}
+
+.page-nav{
+	
+	background-color: #555;
+}
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.page-nav li {
+	display: inline-block;
+	padding: 0 70px 0 50px;
+}
+
+.page-nav a {
+	display: block;
+	background-color: #555;
+	padding: 10px 20px;
+	font-family: arial;
+	font-size: 14;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+
+.page-nav a:hover{
+	background-color: #444;
+	color: #F0ED0F;
+}
+
+.page-main {
+	font-family: arial;
+	font-size: 15px;
+	line-height:1.8;
+	padding: 65px 0;
+}
+
+.page-main h2 {
+	font-size: 28px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #F0ED0F;
+}
+
+.page-main img{
+	max-width: 300px;
+	border: 8px solid #FFFFFF;
+	box-shadow: 0 0 12px #999;
+	position: relative;
+}
+
+.page-footer{
+	background-color: #8C8C8C;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.page-footer p {
+	margin: 0;
+	font-family: arial;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.actions{
+	text-align: center
+}
+
+.actions .go-top{
+	display: inline-block;
+	background-color: #555;
+	padding: 10px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.actions .go-top:hover{
+	background-color: #444;
+	color: #F0ED0F;
+}
+
+
+
+
+
+
+
+
