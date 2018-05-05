@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* Fonts */
+@import url("lib/fontawesome-all.min.css");
+@import url("lib/font-daniel.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
 
 /* General */
@@ -13,8 +15,12 @@ body {
     margin: 0 auto;
 }
 img {
+    display: block;
     max-width: 100%;
+    background-blend-mode: multiply;
 }
+
+
 ul, ol{
     margin: 0;
     padding: 0;
@@ -31,19 +37,98 @@ position: relative;
     top: 25px;
     left: 25px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 30px;
-    color: #fff;
-    text-shadow: 0 0 8px #f0f;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(231, 235, 13);
 }
 
 /* Nav */
+.page-nav{
+    background-color: rgb(229, 255, 0);
+}
+
 .page-nav li{
-    
+    float: left;
+}
+
+.page-nav a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px; /* Arriba Abajo   Izquierda Derecha*/
+    transition: all .7s
+    /*
+    Transition recibe una lista de propiedades a transicionar.
+    Cada propiedad de la lista debe tener espacificado el tiempo de transicion
+    el cual puede ser en segundos (s) o milisegundos (ms)
+    Sintaxis:
+    transition: [propiedad tiempo], ...;
+    transition: background-color 300ms;
+    transition: background-color .3s;
+    transition: background-color .3s, color .5s;
+    transition: all .3s
+    */
+}
+.page-nav a:hover{
+    background-color: rgb(233, 0, 97);
+    color: rgb(255, 255, 255);
+}
+
+.page-nav .fa-search{
+    cursor: pointer;
+    float: right;
+    margin: 10px 20px 0;
+
 }
 
 /* Main */
 
+.page-main{
+    padding: 65px 0;
+}
+
+.page-main h2:first-child{
+    margin-top: 0;
+}
+
+/*Grid*/
+.grid .col-left{
+    float: left;
+    width: 33.33%;
+}
+.grid .col-right{
+    float: right;
+    width: 66.66%;
+    padding-left: 16px;
+    box-sizing: border-box;  
+    /*
+        Box-sizing: valor por defecto "content-box"
+            content-box: EL ancho del contenido unicamnete es el contenido
+            es decir, que lo valores de margin, padding y border se sumarán.
+
+            border-box: El ancho del contenido es la suma del "contenido" + padding + border
+            es decir, que los balores de "padding" y "border" se toman del ancho establecido.
+    */
+}
 /* Footer */
+.page-footer{
+    background-color: #333;
+    padding: 16px 0;
+}
+.paage-footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
 
 /* Helpers */
+
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: block;
+}
+.clearfix:after{
+    clear: both; /*[Both  Left  Right]*/
+}
