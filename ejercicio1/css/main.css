@@ -158,7 +158,7 @@ Selectores básicos
 
 .page-nav a:hover{
 	background-color: #444;
-	color: #F0ED0F;
+	color: rgb(255, 0, 0);
 }
 
 .page-main {

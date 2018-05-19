@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>Lace up</h1>
+            <img src="images/header3.jpg" alt="">
+        </header>
+
+        <nav class="page-nav">
+            <ul>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Productos</a>
+                </li>
+                <li>
+                    <a href="#">Servicios</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="page-main">
+            <section class="page-section">
+                <div class="grid">
+                    <div class="col col-tb-4">
+                        <h2>Contáctanos</h2>
+                    </div>
+
+                    <div class="col col-tb-8">
+                        <form action="#" method="POST" class="form">
+                            <!--
+                                Elementos de formulario:
+                                - input; Campo de entrada de datos de tipo texto de una lìnea)
+                                    - pasword (Campo de entrada de datos de tipo texto de una lìnea, los caracteres se reemplazan por asteriscos o bullets)
+                                    - radio (Radio botones de una opcion)
+                                    - checkbox (Casislla de verificación)
+                                    - file ()
+                                    - submit (Botón de envio d edatos de formulario)
+                                    - rest (Botón regresar al estado inicial del formulario)
+                                    - number (Campo de entrada de datos de tipo numero de una lìnea, solo permitira escribir valores numericos)
+                                    - tel (Campo de entrada de datos de tipo texto de una lìnea)
+                                    - e-mail (Campo de entrada de datos de tipo texto de una lìnea)
+                                    - url (Campo de entrada de datos de tipo texto de una lìnea)
+                            
+                                - label: Para definir una etiqueta descriptiva a un elemento de formulario en especifico 
+
+                                -select: Listado (drop down) de una sola selecion
+                                    option: Elemento de opción seleccionable de "select"
+                                
+                                - textarea: Campo de entrada de texto multilínea.
+
+                                form tiene dos metodos para enviar datos al servidor
+                                
+                                -GET (Valor por defecto) los paremtros se envian por la URL.(Pocos datos)
+                                -POST los parametros se envia en un segundo plano (Muchos datos o archivos)
+
+                                -->
+                                <div class="form__element">
+                                    <label for="name" class="form__label">Nombre</label> <!-- <br />-->
+                                    <input class="form__text" id="name" type="text" name="name" placeholder="p.ej. Juan" />
+                                </div>  
+
+                                <div class="form__element">
+                                    <label for="lastName" class="form__label">Apellido</label>
+                                    <input class="form__text" id="lastName" type="text" name="lastName" placeholder="p.ej. Sánchez">     
+                                </div>
+
+                                <div class="form__element">
+                                    <label for="tel" class="form__label">Teléfono</label>
+                                    <input class="form__text" id="tel" type="text" name="tel" placeholder="(55)24151617">
+                                 </div>
+
+                                 <div class="form__element">
+                                        <label for="e-mail" class="form__label">Correo electrónico</label>
+                                        <input class="form__text" id="e-mail" type="text" name="e-mail" id="" placeholder="correo@dominio.com">
+                                     </div>
+
+                                <div class="form__element">
+                                        <span class="form__label">Sexo</span>
+                                        <input id="female" type="radio" name="gender" value="Muejer">
+                                        <label for="female">Mujer</label>
+
+                                        <input id="male" type="radio" name="gender" value="Hombre">
+                                        <label for="male">Hombre</label>
+                                </div>
+
+                                <div class="form__element">
+                                    <span class="form__label">Hobbies</span>
+                                   <input id="read" type="checkbox" name="read" value="Leer">
+                                   <label for="read">Leer</label>
+
+                                   <input id="dance" type="checkbox" name="dance" value="Bailar">
+                                   <label for="dance">Bailar</label>
+
+                                   <input id="play" type="checkbox" name="play" value="Jugar">
+                                   <label for="play">Jugar</label>
+
+                                   <input id="run" type="checkbox" name="run" value="Correr"> 
+                                   <label for="run">Correr</label>
+                                </div>
+
+                                <div class="form__element">
+                                    <label for="nacionality" class="form__label">Nacionalidad</label>
+                                    <select class="form__text" name="nacionality" class="form__select" id="nacionality">
+                                        <option value="">- Selecciona tu nacionalidad</option>
+                                        <option value="Mexicana">Mexicana</option>
+                                        <option value="Colobiana">Colobiana</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Musulmana">Musulmana</option>
+                                    </select>
+                                </div>
+
+                                <div class="form__element" >
+                                    <label for="message" class="form__label">Dejanos tu comentario</label>
+                                    <textarea maxlength="1200" class="form__text" name="message" id="message" rows="8" placeholder="Max. 1200 plabras"></textarea>
+                                </div>
+
+                                <div class="form__actions">
+                                    <input type="reset" class="form__button">
+                                    <input type="submit" class="form__button form__button--main">
+                                </div>
+
+
+                            </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="page-footer">
+            <p>Todos los derechos reservados | eduMac 2018 | Daniel Sánchez √</p>
+        </footer>
+    </div>
+    <div id="js">
+        <script src="js/lib/jquery-3.3.1.min.js"></script>
+        <script src="js/plugins/jquery.validate.min.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+
+</html>

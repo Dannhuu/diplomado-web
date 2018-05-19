@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+@import url("lib/fontawesome-all.min.css");
+/* General */
+@import url("lib/normalize.css");
+@import url("lib/grid.css");
+
+.page-header h1 {
+    position: absolute;
+    margin: 35px 535px 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 50px rgb(182, 255, 63); 
+
+}
+.body {
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.page-nav{
+	
+	background-color: rgb(168, 168, 168);
+}
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.page-nav li {
+	display: inline-block;
+	padding: 0 70px 0 50px;
+}
+
+.page-nav a {
+	display: block;
+	background-color: rgb(168, 168, 168);
+	padding: 10px 20px;
+	font-family: arial;
+	font-size: 14;
+	text-decoration: none;
+	color: #fff;
+}
+
+.page-nav a:hover{
+	text-shadow: 6px 6px 80px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    transition: 0.4s;
+}
+/* Header */
+
+/* Nav */
+
+/* Main */
+
+.page-main{
+    padding: 65px 0 65px;
+}
+.page-main h2 {
+    color: rgb(0, 0, 0);
+}
+.page-main h2:first-child {
+    margin-top: 0;
+    
+}
+
+/* Form */
+/*.form[class=form]{}*/
+
+.form {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 50px;
+}
+
+.form__label{
+    display: block;
+    margin-bottom: 4px;
+}
+.form__element{
+    margin-bottom: 25px;
+}
+
+/*
+.form input [type=text],
+.form input [type=e-mail],
+.form input [type=tel],
+.form input [type=number],
+select,
+textarea {
+    width: 100%;
+}
+*/
+.form__text{
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.form__text:focus{
+    border-color: #f10085; 
+    box-shadow: 0 0 10px #f10085;
+}
+
+.form__select {
+    height: 70px;
+    background-color: #fff;
+
+}
+
+.form__textarea {
+    resize: none;
+}
+
+.form__actions{
+    text-align: right;
+}
+
+.form__button{
+    border: none;
+    background-color: #666;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer; 
+    transition: all 0.7s;
+}
+.form__button:hover{
+    background-color: #555;
+    color: #fff;
+}
+
+.form__button--main{
+    background-color: #f10085;
+    color: #fff;
+}
+
+.form__button--main:hover{
+    background-color: #f10085;
+}
+
+
+/* Footer */
+.page-footer{
+    background-color:#333;
+    padding: 20px 0; 
+}
+.page-footer p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Helpers */
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: block;
+}
+.clearfix:after{
+    clear: both; 
+}
