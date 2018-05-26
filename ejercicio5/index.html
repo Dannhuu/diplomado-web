@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="col col-tb-8">
-                        <form action="#" method="POST" class="form">
+                        <form id="form" action="php/enviar.php" method="POST" class="form" novalidate>
                             <!--
                                 Elementos de formulario:
                                 - input; Campo de entrada de datos de tipo texto de una lìnea)
@@ -71,22 +71,22 @@
                                 -->
                                 <div class="form__element">
                                     <label for="name" class="form__label">Nombre</label> <!-- <br />-->
-                                    <input class="form__text" id="name" type="text" name="name" placeholder="p.ej. Juan" />
+                                    <input class="form__text" id="name" type="text" name="name" placeholder="p.ej. Juan" required />
                                 </div>  
 
                                 <div class="form__element">
                                     <label for="lastName" class="form__label">Apellido</label>
-                                    <input class="form__text" id="lastName" type="text" name="lastName" placeholder="p.ej. Sánchez">     
+                                    <input class="form__text" id="lastName" type="text" name="lastName" placeholder="p.ej. Sánchez" disabled="disabled">     
                                 </div>
 
                                 <div class="form__element">
                                     <label for="tel" class="form__label">Teléfono</label>
-                                    <input class="form__text" id="tel" type="text" name="tel" placeholder="(55)24151617">
+                                    <input class="form__text" id="tel" type="text" name="tel" placeholder="(55)24151617" required>
                                  </div>
 
                                  <div class="form__element">
                                         <label for="e-mail" class="form__label">Correo electrónico</label>
-                                        <input class="form__text" id="e-mail" type="text" name="e-mail" id="" placeholder="correo@dominio.com">
+                                        <input class="form__text" id="e-mail" type="email" name="e-mail" id="" placeholder="correo@dominio.com" required>
                                      </div>
 
                                 <div class="form__element">
@@ -115,7 +115,7 @@
 
                                 <div class="form__element">
                                     <label for="nacionality" class="form__label">Nacionalidad</label>
-                                    <select class="form__text" name="nacionality" class="form__select" id="nacionality">
+                                    <select class="form__text" name="nacionality" class="form__select" id="nacionality" required>
                                         <option value="">- Selecciona tu nacionalidad</option>
                                         <option value="Mexicana">Mexicana</option>
                                         <option value="Colobiana">Colobiana</option>
@@ -126,12 +126,12 @@
 
                                 <div class="form__element" >
                                     <label for="message" class="form__label">Dejanos tu comentario</label>
-                                    <textarea maxlength="1200" class="form__text" name="message" id="message" rows="8" placeholder="Max. 1200 plabras"></textarea>
+                                    <textarea maxlength="1200" class="form__text" name="message" id="message" rows="8" placeholder="Max. 1200 plabras" required></textarea>
                                 </div>
 
                                 <div class="form__actions">
-                                    <input type="reset" class="form__button">
-                                    <input type="submit" class="form__button form__button--main">
+                                    <input type="reset" value="Restablecer formulario" class="form__button">
+                                    <input type="submit" value="Enviar datos" class="form__button form__button--main">
                                 </div>
 
 

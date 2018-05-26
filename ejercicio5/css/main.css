@@ -116,7 +116,7 @@ textarea {
 }
 .form__text:focus{
     border-color: #f10085; 
-    box-shadow: 0 0 10px #f10085;
+    box-shadow: 0 0 5px #f10085;
 }
 
 .form__select {
@@ -156,6 +156,21 @@ textarea {
     background-color: #f10085;
 }
 
+.form__text:disabled{
+color: #000;
+border-color: rgb(0, 0, 0);
+background-color:rgba(112, 112, 112, 0.6) 
+}
+
+.form label.error{
+    font-size: 14px;
+    color: #f10085;
+}
+
+.form__text.error{
+    border-color: #f00;
+    background-color: rgba(255, 0, 0, .05)
+}
 
 /* Footer */
 .page-footer{
