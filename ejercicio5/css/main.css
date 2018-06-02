@@ -48,15 +48,15 @@ ul, ol{
 	padding: 0 70px 0 50px;
 }
 
-.page-nav a {
-	display: block;
-	background-color: rgb(168, 168, 168);
-	padding: 10px 20px;
-	font-family: arial;
-	font-size: 14;
-	text-decoration: none;
-	color: #fff;
-}
+    .page-nav a {
+        display: block;
+        background-color: rgb(168, 168, 168);
+        padding: 10px 20px;
+        font-family: arial;
+        font-size: 14;
+        text-decoration: none;
+        color: #fff;
+    }
 
 .page-nav a:hover{
 	text-shadow: 6px 6px 80px rgb(0, 0, 0);
