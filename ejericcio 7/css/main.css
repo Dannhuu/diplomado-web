@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+@import url("lib/fontawesome-all.min.css");
+/* General */
+@import url("lib/normalize.css");
+@import url("lib/grid.css");
+
+.body {
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+strong{
+    font-weight: 700;
+}
+
+figure{
+    margin: 0;
+}
+
+/* Header */
+
+.page-header{
+
+    background: #323232 url("../images/Grande\ 2.png") no-repeat fixed center center;
+    background-size: cover;
+    padding: 45px 0 65px;
+    position: relative;
+    min-height: 500px;
+}
+.page-header::before{
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+}
+.page-header h1{
+    font-size: 50px;
+    font-weight: 600px;
+    color: #fff;
+    margin: 0 0 25px;  
+    text-shadow: rgb(241, 204, 18);
+    position: relative;
+
+}
+
+.page-header__intro{
+    color: #fff;
+    position: relative;
+}
+
+.page-header__intro h2{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.page-header__intro p{
+    font-weight: 300;
+    line-height: 27px;
+    text-align: justify;
+}
+
+/* Nav */
+
+.page-nav{
+    padding: 25px 0;
+    background: url("../images/bg_pattern3.png");
+    
+}
+
+.page-nav li {
+    float:left;
+}
+
+.page-nav li + li {
+    margin-left: 200px;
+}
+
+.page-nav a{
+    display: block;
+    padding: 10px 10px;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.page-nav :hover{
+    color: rgba(232, 221, 19, 0.593);
+    transition: all .3s;
+     
+}
+
+/* Main */
+.page.main h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+.page-section{
+    padding: 45px 0;
+}
+
+/* Footer */
+
+/* Card */
+
+.card{
+    padding: 25px;
+    border-radius: 4px;
+
+}
+.card--primary{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.card--secondary{
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.card-info{
+    box-shadow: 0 0 4px rgb(153, 153, 153);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card-info__header {
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+
+}
+
+.card-info h3,
+.card-info__section,
+.card-info__footer{
+    padding: 16px;
+    line-height: 27px;
+}
+
+.card-info h3{
+    margin: 0;
+}
+.card-info__section :first-child{
+    margin-top: 0;
+}
+.card-info__footer{
+    border-top: 1px solid #f2f2f2;
+    text-align: center;
+}
+
+/* Buttons */
+
+.btn{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 300px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.btn--fluid{
+    width: 100%;
+}
+
+.btn--primary{
+    border: 1px solid #fff;
+}
+
+.btn--primary:hover{
+    background-color: rgba(247, 236, 15, 0.2);
+}
+
+.btn--secundary{
+    background-color: #323232;
+}
+.btn--secundary:hover{
+    background: #ababab;
+}
+
+/* Helpers */
+
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: block;
+
+}
+.clearfix:after{
+    clear: both; 
+}
+
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
