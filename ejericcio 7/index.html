@@ -56,7 +56,7 @@
                             <article class="card-info">
                                 <header class="card-info__header">
                                     <figure>
-                                        <img src="images/med-2.jpg" alt="">
+                                        <img src="images/med2.jpg" alt="">
                                     </figure>
                                     <h3>Pollo agridulce</h3>
                                 </header>
@@ -74,7 +74,7 @@
                                 <article class="card-info">
                                         <header class="card-info__header">
                                             <figure>
-                                                <img src="images/med-3.jpg" alt="">
+                                                <img src="images/med3.jpg" alt="">
                                             </figure>
                                             <h3>Salmon ahumado</h3>
                                         </header>
@@ -144,8 +144,7 @@
                                 <h2>Nuestras creaciones</h2>
                             </div>
                             <div class="col col-tb-8">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis amet deleniti rem minus! Tenetur assumenda explicabo ratione maiores quod deserunt deleniti, eum modi quibusdam quisquam accusantium eaque blanditiis consequatur repellat esse similique accusamus animi ipsum alias non eligendi dignissimos culpa? Ipsam ad voluptas nulla, sequi provident possimus inventore alias ipsum, placeat eius pariatur, asperiores voluptatibus magni! Consequuntur, saepe quibusdam sint et repudiandae porro eaque, quas molestiae commodi minima sequi magnam maxime fugit mollitia nam, maiores est iure consectetur. Quod iste laboriosam inventore ab corrupti fugit aperiam dolor. Eligendi, nemo adipisci error quis aut mollitia laudantium corporis placeat, at maiores modi.</p>
-                                <p>Quas, fuga nihil blanditiis nostrum assumenda pariatur dignissimos, vitae officia tempora fugit inventore sed ducimus modi autem eum esse sit quam error ullam saepe laborum? Sunt saepe ducimus repellendus possimus ipsa tempora praesentium tempore asperiores ipsam autem neque exercitationem ratione enim eum atque sed quod quidem nesciunt expedita soluta animi, inventore voluptatum nostrum fugiat. Architecto cum, aspernatur magni, corrupti nihil deleniti mollitia distinctio, nulla eos at aliquid? Voluptatem temporibus alias qui reiciendis aliquam maiores illo, placeat ducimus omnis praesentium inventore consequatur, voluptatibus iusto culpa aut! Ipsam minus quisquam dolores inventore illum at animi, dignissimos cumque et, architecto libero excepturi neque?</p>
+                                <div id="cardContent"></div>
                             </div>
                         </div>
                     </div>
@@ -184,11 +183,43 @@
         </footer>
     </div>
     <div id="js">
+        <script src="js/lib/handlebars-v4.0.11.js"></script>
         <script src="js/lib/jquery-3.3.1.min.js"></script>
         <script src="js/plugins/jquery.sticky.js"></script>
         <script src="js/plugins/jquery.flexslider-min.js"></script>
         <script src="js/main.js"></script>
     </div>
+    <script id="cardTemplate" type="text/x-handlebars-template">
+        
+        <div  id="cardCurrentMatch" class="card-current-match">
+                <div class="card-current-match__header">
+                    <h3>Jugando en vivo</h3>
+                    <span>Tiempo transcurrido <strong>{{time}}</strong></span>
+                </div>
+                <div class="card-current-match__content">
+                    <div class="grid">
+                        <div class="col col-tb-6">
+                             <h4>{{home_team.country}}</h4>
+                             <ul class="card-current-match__list">
+                                 <li>Goles: <strong>{{home_team.goals}}</strong></li>
+                                 <li>Tarjetas amarillas: <strong>{{home_team_statistics.yellow_cards}}</strong></li>
+                                 <li>Tarjetas rojas:<strong>{{home_team_statistics.red_cards}}</strong></li>
+                                 <li>Penales: <strong>{{home_team.penalties}}</strong></li>
+                             </ul>
+                        </div>
+                        <div class="col col-tb-6">
+                                <h4>{{away_team.country}}</h4>
+                                <ul class="card-current-match__list">
+                                    <li>Goles: <strong>{{away_team.goals}}</strong></li>
+                                    <li>Tarjetas amarillas: <strong>{{away_team_statistics.yellow_cards}}</strong></li>
+                                    <li>Tarjetas rojas:<strong>{{away_team_statistics.red_cards}}</strong></li>
+                                    <li>Penales: <strong>{{away_team.penalties}}</strong></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ </script>
 </body>
 
 </html>
