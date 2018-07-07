@@ -16,10 +16,15 @@ $(function () {
         currentMatchAwayRedCards = $('#currentMatchAwayRedCards'),
         cardTemplate = $('#cardTemplate').html(),
         cardContent = $('#cardContent');
+
+    var tabsItems= $('.tabs__item');
+    var tabsContents= $('.tabs__content');
+   
     
     //statements
     pageNav.sticky({
     //topSpacing: 25,
+        zIndex:10,
     });
 
     var template = Handlebars.compile(cardTemplate)
@@ -80,6 +85,39 @@ $(function () {
             cardCurrentMatch.removeClass('loading');
         }
     })
-        //.done(setCurrentMatchValues); 
+        //.done(setCurrentMatchValues);
+        
+        //Lightbox conf.
+
+        lightbox.option({
+            albumLabel: "Imagen %1 de %2",
+            disableScrolling: true,
+            possitionFromTop: 100,
+            fadeDuration: 1000,
+            imageFadeDuration: 1000,
+            wrapAround: true,
+
+        });
+
+        //Tambs component
+
+        tabsItems.on('click', function() {
+
+            //Se obtiene el número de íncide que ocupa el item al que hacemis clic
+            var indexItem = tabsItems.index(this);
+
+            
+
+            //Se elimina la clase 'active' a todos los items
+            tabsItems.removeClass('active');
+
+            //Se elimina la clase 'active' a todos los contents
+             tabsContents.removeClass('active')
+
+            //Se añade la clase 'active' al item sobre el que hace clic
+            $(this).addClass('active');
+            $(tabsContents[indexItem]).addClass('active');
+
+        });
 
 });

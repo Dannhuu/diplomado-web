@@ -232,6 +232,106 @@ figure{
     background: #ababab;
 }
 
+/* Table */
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead{
+    background-color: #666;
+    color: #fff;
+}
+
+.table thhead th{
+    font-weight: 300;
+}
+
+.table th,
+.table td{
+    padding: 10px;
+    border: 1px solid rgba(232, 221, 19, 0.593);
+    
+}
+caption{
+    padding: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+/* Gallery */
+.gallery__item{
+    display: inline-block;
+    max-width: 200px;
+    margin: 3px;
+    overflow: hidden;
+    
+}
+
+.gallery__item:hover img{
+    transition: all 0.9s;
+    transform: scale(1.4);
+   
+}
+
+/*Tabs*/
+.tabs__menu{
+    position: relative;
+    top: 1px;
+}
+.tabs__menu:before,
+.tabs__menu::after {
+    content: "";
+    display: block;
+}
+.tabs__menu:after{
+    clear: both; 
+}
+
+.tabs__item {
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    background-color: #f9f9f9; 
+    cursor: pointer
+
+}
+.tabs__item:hover{
+    transition: all 0.9s;
+}
+
+.tabs__item + .tabs__item {
+    margin-left: 2px;
+}
+
+.tabs__content{
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px; 
+}
+
+.tabs__item.active{
+    background-color: #FFF;
+    border-bottom-color: #FFF 
+}
+.tabs__content.active{
+   display: block;
+}
+
+.tabs__content p{
+    line-height: 35px;
+}
+
+.antequera{
+    max-width: 50%;
+}
+
+
 /* Helpers */
 
 .clearfix:before,
