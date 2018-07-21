@@ -23,9 +23,11 @@
     	<h1><?php bloginfo( 'name' ); ?></h1>
     	<img src="<?php bloginfo('template_url'); ?>/images/bg_header.jpg" alt="Snoopy">
 	</header>
+	
 	<?php
 	wp_nav_menu(array(
 		'theme_location' => 'menu-1',
+		'container_id' => 'pageNav',
 		'container_class' => 'page-nav',
 		'menu_class' => 'clearfix',
 	));

@@ -10,44 +10,51 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	 <main class="page-main clearfix">
 
-		<?php if ( have_posts() ) : ?>
+			<section class="section section-blog">
+				<h2><?php the_archive_title(); ?></h2>
+				<?php if ( have_posts() ) : ?>
+					<?php while ( have_posts() ) : the_post(); ?>  
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+						<article class="article-blog">
+								<header>
+									<h3><a href="<?php the_permalink(); ?>"> <?php the_title(); ?>  </a></h3>
+									<time datetime="<?php the_time("y-M-d") ?>"><?php the_time('d \d\e\ F, Y') ?></time>
+									
+									<a href="<?php the_permalink(); ?>">
+									<?php  if ( has_post_thumbnail() ) : ?>
+										<p><?php the_post_thumbnail(thumbnail); ?></p>
+									<?php else: ?>
+										<img src="<?php bloginfo('template_url'); ?>/images/img-5.jpg" alt="Snoopy">
+									<?php endif; ?>
+									</a>
+								</header>
+								<main>
+									<?php the_excerpt (); ?>
+								</main>
+								<footer>
+									<small>Autor: <?php the_author(); ?></small>
+								</footer>
+						 </article>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+					<?php endwhile; ?>
+					<?php the_posts_pagination(array(
+					'prev_text' => 'Anterior', 
+					'screen_reader_text' => ' ',
+					)); ?>
+					<?php else: ?>
+						<p>No hay articulos para mostrar</p>
+				<?php endif; ?>
+			</section>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+ <aside class="aside-blog">
 
-			endwhile;
+		<?php get_sidebar(); ?>
+</aside>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</main>
 
 <?php
-get_sidebar();
+
 get_footer();

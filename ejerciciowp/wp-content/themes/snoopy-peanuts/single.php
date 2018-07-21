@@ -10,28 +10,36 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	  <main class="page-main clearfix">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+				<section>
+					<?php if ( have_posts() ) : ?>
+						<?php while ( have_posts() ) : the_post(); ?>  
 
-			get_template_part( 'template-parts/content', get_post_type() );
+							<article class="article-blog">
+								<header>
+									<h3><?php the_title(); ?></h3>
+									<time datetime="<?php the_time("y-M-d") ?>"><?php the_time('d \d\e\ F, Y') ?></time>
+									<?php  if ( has_post_thumbnail() ) : ?>
+										<p><?php the_post_thumbnail(); ?></p>
+									<?php else: ?>
+										<img src="<?php bloginfo('template_url'); ?>/images/img-5.jpg" alt="Snoopy">
+									<?php endif; ?>
+									</a>
+								</header>
+								<main>
+									<?php the_content (); ?>
+								</main>
+								<footer>
+									<small>Autor: <?php the_author(); ?></small>
+								</footer>
+							</article>
 
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</section>
+			</main>
 
 <?php
-get_sidebar();
+
 get_footer();
